@@ -12,7 +12,7 @@ class CartoonCtrl {
         this.stage = new PIXI.Container();
         var graphics = new PIXI.Graphics();
 
-        document.body.appendChild(this.renderer.view);console.log(document.body)
+        document.body.appendChild(this.renderer.view);
         this.stage.interactive = true;
 
 
@@ -37,9 +37,10 @@ class CartoonCtrl {
         // run the render loop
         this.animate();
     }
-    animate() {console.log(this.renderer)
+
+    animate() {
         this.renderer.render(this.stage);
-        requestAnimationFrame( this.animate );
+        requestAnimationFrame( () => this.animate() );
     }
 
 }

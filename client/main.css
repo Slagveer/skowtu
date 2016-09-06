@@ -126,7 +126,7 @@ header .hide-completed {
     }
 }
 canvas {
-    position: relative;
+    position: absolute;
     width: 400px;
     height: 400px;
     top: 0px;
